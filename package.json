@@ -1,0 +1,26 @@
+{
+    "name": "ttcn-snippet",
+    "displayName": "ttcn-snippet",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "weditor",
+    "engines": {
+        "vscode": "^1.14.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ttcn3",
+            "aliases": ["ttcn3", "ttcn3"],
+            "extensions": [".ttcn",".ttcn3"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ttcn3",
+            "scopeName": "source.ttcn",
+            "path": "./syntaxes/ttcn3.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,50 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ttcn3",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#structs"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.ttcn3",
+				"match": "\\b(if|while|for|return|control)\\b"
+			}]
+		},
+		"structs": {
+			"patterns": [{
+				"name": "keyword.struct.ttcn3",
+				"match": "\\b(module|runs|on|testcase)\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "keyword.type.ttcn3",
+				"match": "\\b(modulepar|boolean|integer)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.ttcn3",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ttcn3",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.ttcn"
+}
