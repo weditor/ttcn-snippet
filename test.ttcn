@@ -1,0 +1,8 @@
+public import from MyModule {type Mytype1, template all}
+friend import from urn_3gpp_ns_cw language "XSD" all;
+private import from MyIPs all except {group MyGroup};
+
+
+friend module MyTypes language "TTCN-3:2016" {
+    
+}

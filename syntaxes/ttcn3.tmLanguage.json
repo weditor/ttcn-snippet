@@ -6,16 +6,10 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#types"
+			"include": "#storage"
 		},
 		{
-			"include": "#types_prefix"
-		},
-		{
-			"include": "#declears"
-		},
-		{
-			"include": "#structs"
+			"include": "#storage.types"
 		},
 		{
 			"include": "#strings"
@@ -25,32 +19,33 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.ttcn3",
-				"match": "\\b(if|while|for|return|control)\\b"
+				"match": "\\b(if|while|for|return|control|do|select|case|else|union|label|continue|goto)\\b"
 			}]
 		},
-		"structs": {
-			"patterns": [{
-				"name": "keyword.struct.ttcn3",
-				"match": "\\b(runs|on|testcase)\\b"
-			}]
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.modifier.import.ttcn3",
+					"match": "\\b(import|from|all|except)\\b"
+				},{
+					"name": "storage.modifier.ttcn3",
+					"match": "\\b(friend|private|public)\\b"
+				},{
+					"name": "storage.type.extend.ttcn3",
+					"match": "\\b(extend|message|procedure)\\b"
+				},{
+					"name": "storage.modifier.ttcn3",
+					"match": "\\b(const|var|lazy|fuzzy|template|modulepar|modifiers|type|record|set)\\b"
+				}
+			]
 		},
-		"declears": {
-			"patterns": [{
-				"name": "keyword.declear.ttcn3",
-				"match": "\\b(module)\\b"
-			}]
-		},
-		"types": {
-			"patterns": [{
-				"name": "keyword.type.ttcn3",
-				"match": "\\b(boolean|integer)\\b"
-			}]
-		},
-		"types_prefix": {
-			"patterns": [{
-				"name": "keyword.type.prefix.ttcn3",
-				"match": "\\b(modulepar)\\b"
-			}]
+		"storage.types": {
+			"patterns": [
+				{
+					"name": "storage.type.ttcn3",
+					"match": "\\b(module|group|language|component|signature|boolean|integer|float|charstring|universal|bitstring|hexstring|octetstring)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.ttcn3",
